@@ -1,0 +1,129 @@
+.pacman {
+    position: relative;
+}
+
+body .pacman > div:first-of-type {
+    border-top-color: #5d9cec;
+    border-left-color: #5d9cec;
+    border-bottom-color: #5d9cec;
+}
+
+.pacman > div:first-of-type, .pacman > div:nth-child(2) {
+    width: 0;
+    height: 0;
+    border-right: 50px solid transparent;
+    border-top: 50px solid #fff;
+    border-left: 50px solid #fff;
+    border-bottom: 50px solid #fff;
+    border-radius: 50px;
+    position: relative;
+}
+
+.pacman > div:first-of-type {
+    animation: rotate_pacman_half_up 0.65s 0s infinite;
+}
+
+@keyframes rotate_pacman_half_up {
+    0% {
+        transform: rotate(270deg);
+    }
+    50% {
+        transform: rotate(1turn);
+    }
+    100% {
+        transform: rotate(270deg);
+    }
+}
+
+body .pacman > div:nth-child(2) {
+    border-top-color: #5d9cec;
+    border-left-color: #5d9cec;
+    border-bottom-color: #5d9cec;
+}
+
+.pacman > div:nth-child(2) {
+    width: 0;
+    height: 0;
+    border-right: 50px solid transparent;
+    border-top: 50px solid #fff;
+    border-left: 50px solid #fff;
+    border-bottom: 50px solid #fff;
+    border-radius: 50px;
+    position: relative;
+}
+
+@keyframes rotate_pacman_half_down {
+    0% {
+        transform: rotate(90deg);
+    }
+    50% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(90deg);
+    }
+}
+
+.pacman > div:nth-child(2) {
+    animation: pacman-balls 1s -.99s infinite linear;
+}
+
+.pacman > div:nth-child(2) {
+    animation: rotate_pacman_half_down 0.65s 0s infinite;
+    margin-top: -100px;
+}
+
+body .pacman > div:nth-child(3), body .pacman > div:nth-child(4), body .pacman > div:nth-child(5), body .pacman > div:nth-child(6) {
+    color: #f05050;
+    padding: 30px;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.pacman > div:nth-child(3), .pacman > div:nth-child(4), .pacman > div:nth-child(5), .pacman > div:nth-child(6) {
+    margin: 2px;
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    transform: translateY(-6.25px);
+    top: 15px;
+    left: 125px;
+}
+
+.pacman > div:nth-child(3) {
+    animation: pacman-balls 3s -1.98s infinite linear;
+}
+
+@keyframes pacman-balls {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: .9;
+    }
+    75% {
+        opacity: .7;
+    }
+    90% {
+        opacity: 0;
+    }
+    100% {
+        transform: translate(-100px, -6.25px);
+    }
+}
+
+.pacman > div:nth-child(4) {
+    animation: pacman-balls 3s -.99s infinite linear;
+}
+
+.pacman > div:nth-child(5) {
+    animation: pacman-balls 3s 0s infinite linear;
+}
+
+.pacman-container {
+    display: flex;
+    width: 3px;
+    margin: auto;
+    padding-top: 50px;
+    padding-right: 115px;
+}
